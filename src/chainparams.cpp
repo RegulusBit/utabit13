@@ -50,8 +50,8 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "utabit genesis block!";
-    const CScript genesisOutputScript = CScript() << ParseHex("04B3D7B93CF3577B997CFB58CB480BF536BDF2779B191E2EA8D67FDD55F65BBF6D994570E1B22B281E964D219C24C78EB41F72751CCF9553F31E5665A23CFE5671") << OP_CHECKSIG;
+    const char* pszTimestamp = "Do not be a slave to others when Allah has created you free - Imam Ali (AS)";
+    const CScript genesisOutputScript = CScript() << ParseHex("04D973714C89AACF59F84EE8E42378B934F4AAF88C54E64470581C213C2733C01FDA4AA4CD268A0AC986BBD3132F1D184DCF2F9655BC21737643B29993F896FCE9") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 
@@ -112,14 +112,14 @@ public:
         nDefaultPort = 18444;
         nPruneAfterHeight = 100000;
 
-        genesis = CreateGenesisBlock(1494997326, 419586792, 0x1d00ffff, 1, 1000 * COIN);
+        genesis = CreateGenesisBlock(1497879163, 1212232890, 0x1d00ffff, 1, 1000 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000000c71896fc1231cb27eb439ca229c93464ec2fce28eaf382678ecc3350"));
-        assert(genesis.hashMerkleRoot == uint256S("0xae7f47f948ad77a77403c563bb218ef44dee276d3ec98338284a8c07532b8936"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000000005a462da32e1252f0150bd953e130870cddb057d66d922b528c198b74"));
+        assert(genesis.hashMerkleRoot == uint256S("0xd7389205ab9a5d9b804edc0570a1e7ebeec30a2e5f079334f4ad4868c80a98b5"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.push_back(CDNSSeedData("192.69.216.120", "192.69.216.120", true)); // Utabit server
-	vSeeds.push_back(CDNSSeedData("185.10.73.72", "185.10.73.72", true)); // Utabit server
+        vSeeds.push_back(CDNSSeedData("192.69.216.120", "192.69.216.120", true)); // Pieter Wuille, only supports x1, x5, x9, and xd
+        vSeeds.push_back(CDNSSeedData("185.10.73.72", "185.10.73.72", true));
 /*
         vSeeds.push_back(CDNSSeedData("bluematt.me", "dnsseed.bluematt.me", true)); // Matt Corallo, only supports x9
         vSeeds.push_back(CDNSSeedData("dashjr.org", "dnsseed.utabit.dashjr.org")); // Luke Dashjr
