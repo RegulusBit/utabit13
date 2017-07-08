@@ -118,9 +118,9 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0xd7389205ab9a5d9b804edc0570a1e7ebeec30a2e5f079334f4ad4868c80a98b5"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.push_back(CDNSSeedData("192.69.216.120", "192.69.216.120", true)); // Pieter Wuille, only supports x1, x5, x9, and xd
-        vSeeds.push_back(CDNSSeedData("185.10.73.72", "185.10.73.72", true));
-/*
+        vSeeds.push_back(CDNSSeedData("utabitseeder.tk", "seed.utabitseeder.tk", true)); // Pieter Wuille, only supports x1, x5, x9, and xd
+/*      vSeeds.push_back(CDNSSeedData("185.10.73.72", "185.10.73.72", true));
+
         vSeeds.push_back(CDNSSeedData("bluematt.me", "dnsseed.bluematt.me", true)); // Matt Corallo, only supports x9
         vSeeds.push_back(CDNSSeedData("dashjr.org", "dnsseed.utabit.dashjr.org")); // Luke Dashjr
         vSeeds.push_back(CDNSSeedData("utabitstats.com", "seed.utabitstats.com", true)); // Christian Decker, supports x1 - xf
